@@ -18,6 +18,9 @@
 #ifndef SC_SCRIPTLOADER_H
 #define SC_SCRIPTLOADER_H
 
+
 void AddScripts();
+void AddSC_discount_scripts();
+
 
 #endif
