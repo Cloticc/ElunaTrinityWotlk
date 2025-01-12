@@ -846,6 +846,14 @@ StartDeathKnightPlayerLevel = 55
 StartPlayerMoney = 0
 
 #
+#    StartDeathKnightPlayerMoney
+#        Description: Amount of money (in Copper) that a death knight character has after creation.
+#        Default:     2000
+#                     100 - (1 Silver)
+
+StartDeathKnightPlayerMoney = 2000
+
+#
 #    MaxHonorPoints
 #        Description: Maximum honor points a character can have.
 #        Default:     75000
@@ -3876,6 +3884,12 @@ AuctionHouseBot.Buyer.Recheck.Interval = 20
 #       Default:     true  - (enabled)
 #                    false - (disabled)
 #
+#   Eluna.ScriptReloader
+#       Description: Enable or disable the automated script reloader.
+#                    This will automatically reload Eluna when it detects changes to scripts.
+#       Default:     false - (disabled)
+#                    true  - (enabled)
+#
 #   Eluna.OnlyOnMaps
 #       Description: When Eluna is enabled, a state will only be created for a list of specified maps
 #                    This only works for multistate mode.
@@ -3909,7 +3923,8 @@ AuctionHouseBot.Buyer.Recheck.Interval = 20
 #
 
 Eluna.Enabled = true
-Eluna.CompatibilityMode = true
+Eluna.CompatibilityMode = false
+Eluna.ScriptReloader = false
 Eluna.OnlyOnMaps = ""
 Eluna.TraceBack = false
 Eluna.ScriptPath = "lua_scripts"

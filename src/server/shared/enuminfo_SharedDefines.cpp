@@ -423,7 +423,7 @@ TC_API_EXPORT EnumText EnumUtils<SpellAttr1>::ToString(SpellAttr1 value)
         case SPELL_ATTR1_UNK23: return { "SPELL_ATTR1_UNK23", "Unknwon attribute 23@Attr1", "" };
         case SPELL_ATTR1_IS_FISHING: return { "SPELL_ATTR1_IS_FISHING", "Fishing (client only)", "" };
         case SPELL_ATTR1_UNK25: return { "SPELL_ATTR1_UNK25", "Unknown attribute 25@Attr1", "" };
-        case SPELL_ATTR1_UNK26: return { "SPELL_ATTR1_UNK26", "Unknown attribute 26@Attr1", "Related to [target=focus] and [target=mouseover] macros?" };
+        case SPELL_ATTR1_REQUIRE_ALL_TARGETS: return { "SPELL_ATTR1_REQUIRE_ALL_TARGETS", "Require All Targets", "" };
         case SPELL_ATTR1_UNK27: return { "SPELL_ATTR1_UNK27", "Unknown attribute 27@Attr1", "Melee spell?" };
         case SPELL_ATTR1_DONT_DISPLAY_IN_AURA_BAR: return { "SPELL_ATTR1_DONT_DISPLAY_IN_AURA_BAR", "Hide in aura bar (client only)", "" };
         case SPELL_ATTR1_CHANNEL_DISPLAY_SPELL_NAME: return { "SPELL_ATTR1_CHANNEL_DISPLAY_SPELL_NAME", "Show spell name during channel (client only)", "" };
@@ -467,7 +467,7 @@ TC_API_EXPORT SpellAttr1 EnumUtils<SpellAttr1>::FromIndex(size_t index)
         case 23: return SPELL_ATTR1_UNK23;
         case 24: return SPELL_ATTR1_IS_FISHING;
         case 25: return SPELL_ATTR1_UNK25;
-        case 26: return SPELL_ATTR1_UNK26;
+        case 26: return SPELL_ATTR1_REQUIRE_ALL_TARGETS;
         case 27: return SPELL_ATTR1_UNK27;
         case 28: return SPELL_ATTR1_DONT_DISPLAY_IN_AURA_BAR;
         case 29: return SPELL_ATTR1_CHANNEL_DISPLAY_SPELL_NAME;
@@ -508,7 +508,7 @@ TC_API_EXPORT size_t EnumUtils<SpellAttr1>::ToIndex(SpellAttr1 value)
         case SPELL_ATTR1_UNK23: return 23;
         case SPELL_ATTR1_IS_FISHING: return 24;
         case SPELL_ATTR1_UNK25: return 25;
-        case SPELL_ATTR1_UNK26: return 26;
+        case SPELL_ATTR1_REQUIRE_ALL_TARGETS: return 26;
         case SPELL_ATTR1_UNK27: return 27;
         case SPELL_ATTR1_DONT_DISPLAY_IN_AURA_BAR: return 28;
         case SPELL_ATTR1_CHANNEL_DISPLAY_SPELL_NAME: return 29;
@@ -529,7 +529,7 @@ TC_API_EXPORT EnumText EnumUtils<SpellAttr2>::ToString(SpellAttr2 value)
         case SPELL_ATTR2_CAN_TARGET_DEAD: return { "SPELL_ATTR2_CAN_TARGET_DEAD", "Can target dead players or corpses", "" };
         case SPELL_ATTR2_UNK1: return { "SPELL_ATTR2_UNK1", "Unknown attribute 1@Attr2", "" };
         case SPELL_ATTR2_CAN_TARGET_NOT_IN_LOS: return { "SPELL_ATTR2_CAN_TARGET_NOT_IN_LOS", "Ignore Line of Sight", "" };
-        case SPELL_ATTR2_UNK3: return { "SPELL_ATTR2_UNK3", "Ignore aura scaling", "" };
+        case SPELL_ATTR2_ALLOW_LOW_LEVEL_BUFF: return { "SPELL_ATTR2_ALLOW_LOW_LEVEL_BUFF", "Allow Low Level Buff", "" };
         case SPELL_ATTR2_DISPLAY_IN_STANCE_BAR: return { "SPELL_ATTR2_DISPLAY_IN_STANCE_BAR", "Show in stance bar (client only)", "" };
         case SPELL_ATTR2_AUTOREPEAT_FLAG: return { "SPELL_ATTR2_AUTOREPEAT_FLAG", "Ranged auto-attack spell", "" };
         case SPELL_ATTR2_CANT_TARGET_TAPPED: return { "SPELL_ATTR2_CANT_TARGET_TAPPED", "Cannot target others' tapped units", "Can only target untapped units, or those tapped by caster" };
@@ -547,7 +547,7 @@ TC_API_EXPORT EnumText EnumUtils<SpellAttr2>::ToString(SpellAttr2 value)
         case SPELL_ATTR2_REQ_DEAD_PET: return { "SPELL_ATTR2_REQ_DEAD_PET", "Requires dead pet", "" };
         case SPELL_ATTR2_NOT_NEED_SHAPESHIFT: return { "SPELL_ATTR2_NOT_NEED_SHAPESHIFT", "Also allow outside shapeshift", "Even if Stances are nonzero, allow spell to be cast outside of shapeshift (though not in a different shapeshift)" };
         case SPELL_ATTR2_UNK20: return { "SPELL_ATTR2_UNK20", "Unknown attribute 20@Attr2", "" };
-        case SPELL_ATTR2_DAMAGE_REDUCED_SHIELD: return { "SPELL_ATTR2_DAMAGE_REDUCED_SHIELD", "Damage reduction ability", "Causes BG flags to be dropped if combined with ATTR1_DISPEL_AURAS_ON_IMMUNITY" };
+        case SPELL_ATTR2_FAIL_ON_ALL_TARGETS_IMMUNE: return { "SPELL_ATTR2_FAIL_ON_ALL_TARGETS_IMMUNE", "Fail on all targets immune", "Causes BG flags to be dropped if combined with ATTR1_DISPEL_AURAS_ON_IMMUNITY" };
         case SPELL_ATTR2_UNK22: return { "SPELL_ATTR2_UNK22", "Unknown attribute 22@Attr2", "" };
         case SPELL_ATTR2_IS_ARCANE_CONCENTRATION: return { "SPELL_ATTR2_IS_ARCANE_CONCENTRATION", "Arcane Concentration", "" };
         case SPELL_ATTR2_UNK24: return { "SPELL_ATTR2_UNK24", "Unknown attribute 24@Attr2", "" };
@@ -573,7 +573,7 @@ TC_API_EXPORT SpellAttr2 EnumUtils<SpellAttr2>::FromIndex(size_t index)
         case 0: return SPELL_ATTR2_CAN_TARGET_DEAD;
         case 1: return SPELL_ATTR2_UNK1;
         case 2: return SPELL_ATTR2_CAN_TARGET_NOT_IN_LOS;
-        case 3: return SPELL_ATTR2_UNK3;
+        case 3: return SPELL_ATTR2_ALLOW_LOW_LEVEL_BUFF;
         case 4: return SPELL_ATTR2_DISPLAY_IN_STANCE_BAR;
         case 5: return SPELL_ATTR2_AUTOREPEAT_FLAG;
         case 6: return SPELL_ATTR2_CANT_TARGET_TAPPED;
@@ -591,7 +591,7 @@ TC_API_EXPORT SpellAttr2 EnumUtils<SpellAttr2>::FromIndex(size_t index)
         case 18: return SPELL_ATTR2_REQ_DEAD_PET;
         case 19: return SPELL_ATTR2_NOT_NEED_SHAPESHIFT;
         case 20: return SPELL_ATTR2_UNK20;
-        case 21: return SPELL_ATTR2_DAMAGE_REDUCED_SHIELD;
+        case 21: return SPELL_ATTR2_FAIL_ON_ALL_TARGETS_IMMUNE;
         case 22: return SPELL_ATTR2_UNK22;
         case 23: return SPELL_ATTR2_IS_ARCANE_CONCENTRATION;
         case 24: return SPELL_ATTR2_UNK24;
@@ -614,7 +614,7 @@ TC_API_EXPORT size_t EnumUtils<SpellAttr2>::ToIndex(SpellAttr2 value)
         case SPELL_ATTR2_CAN_TARGET_DEAD: return 0;
         case SPELL_ATTR2_UNK1: return 1;
         case SPELL_ATTR2_CAN_TARGET_NOT_IN_LOS: return 2;
-        case SPELL_ATTR2_UNK3: return 3;
+        case SPELL_ATTR2_ALLOW_LOW_LEVEL_BUFF: return 3;
         case SPELL_ATTR2_DISPLAY_IN_STANCE_BAR: return 4;
         case SPELL_ATTR2_AUTOREPEAT_FLAG: return 5;
         case SPELL_ATTR2_CANT_TARGET_TAPPED: return 6;
@@ -632,7 +632,7 @@ TC_API_EXPORT size_t EnumUtils<SpellAttr2>::ToIndex(SpellAttr2 value)
         case SPELL_ATTR2_REQ_DEAD_PET: return 18;
         case SPELL_ATTR2_NOT_NEED_SHAPESHIFT: return 19;
         case SPELL_ATTR2_UNK20: return 20;
-        case SPELL_ATTR2_DAMAGE_REDUCED_SHIELD: return 21;
+        case SPELL_ATTR2_FAIL_ON_ALL_TARGETS_IMMUNE: return 21;
         case SPELL_ATTR2_UNK22: return 22;
         case SPELL_ATTR2_IS_ARCANE_CONCENTRATION: return 23;
         case SPELL_ATTR2_UNK24: return 24;
